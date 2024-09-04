@@ -1,4 +1,4 @@
-# ravencoin-stratum-proxy
+# firo-stratum-proxy
 Allows you to mine directly to your own local wallet/node with any mining software that uses the stratum protocol.
 
 If you are a windows user and are not familiar with python, a walk-through and auto installer is avaliable for a (hopefully) easy install. See [here](#windows).
@@ -44,22 +44,22 @@ A bat file is avaliable to auto install python and dependencies and generate ano
 
 ## Node Requirements:
 
-Requires the following `raven.conf` options:
+Requires the following `firo.conf` options:
 ```
 server=1
 rpcuser=my_username
 rpcpassword=my_password
 rpcallowip=127.0.0.1
 ```
-On *nix OS's this file is located at `~/.raven` by default. On windows, this file is located at `%appdata%\roaming\Raven`.
+On *nix OS's this file is located at `~/.firo` by default. On windows, this file is located at `%appdata%\roaming\firo`.
 
-You may need to create the `raven.conf` file and add those lines if it does not exist.
+You may need to create the `firo.conf` file and add those lines if it does not exist.
 
-For testnet you can add `testnet=1` to your `raven.conf`
+For testnet you can add `testnet=1` to your `firo.conf`
 
 note:
-- Default Mainnet rpcport = `8766`
-- Default Testnet rpcport = `18766`
+- Default Mainnet rpcport = `8888`
+- Default Testnet rpcport = `18888`
 
 Make sure you configure the rpcport on `stratum-converter.py` accordingly.
 
@@ -81,16 +81,13 @@ Connect to it with your miner of choise:
 
 | status | miner | example |
 | - | - | - |
-| :heavy_check_mark: Works | T-rex | t-rex -a kawpow -o stratum+tcp://PROXY_IP:54325 -u YOUR_WALLET_ADDRESS -p x |
-| :heavy_check_mark: Works | TeamRedMiner | teamredminer -o stratum+tcp://PROXY_IP:54325 -u YOUR_WALLET_ADDRESS -p x --eth_hash_report=on |
-| :heavy_check_mark: Works | Gminer | miner --algo kawpow --server stratum+tcp://PROXY_IP:54325 --user YOUR_WALLET_ADDRESS --pass x |
-| :exclamation:   Errors | NBminer | :grey_question: |
-| :heavy_check_mark: Works | kawpowminer | kawpowminer -P stratum+tcp://YOUR_WALLET_ADDRESS.worker@PROXY_IP:54325 |
+| :heavy_check_mark: Works | T-rex | t-rex -a firopow -o stratum+tcp://PROXY_IP:54325 -u YOUR_WALLET_ADDRESS -p x |
+| :heavy_check_mark: Works | TeamRedMiner | firopow -o stratum+tcp://PROXY_IP:54325 -u YOUR_WALLET_ADDRESS -p x --eth_hash_report=on |
 
 <a name="help"/>
 
 ## Help:
-@kralverde#0550 is avaliable on the community ravencoin server (https://discord.gg/jn6uhur)
+This work was forked from @kralverde who usually hangs out at the community ravencoin server (https://discord.gg/jn6uhur)
 Donate: 
   - RVN: RMriWfETGV97hskqH8TvSWVZb9idK6fkU6
   - BTC: bc1q9vs8ttd6sg8dvhwwqh5g6c5wjm0fwkfmq2lgff
