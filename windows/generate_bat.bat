@@ -88,13 +88,13 @@ if "%IS_MAINNET_INPUT%" == "" (
 
 if "%IS_MAINNET_INPUT%" == "mainnet" (
     set "IS_MAINNET=y"
-    set "DEFAULT_PORT=8766"
+    set "DEFAULT_PORT=8888"
     goto POST_CHECK_MAINNET
 )
 
 if "%IS_MAINNET_INPUT%" == "testnet" (
     set "IS_MAINNET="
-    set "DEFAULT_PORT=18766"
+    set "DEFAULT_PORT=18888"
     goto POST_CHECK_MAINNET
 )
 
